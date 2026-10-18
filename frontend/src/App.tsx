@@ -1,0 +1,36 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { AuthProvider } from './auth'
+import { CartProvider } from './cart'
+import { ChatMatchesProvider } from './chatMatches'
+import { Layout } from './components/Layout'
+import { AboutPage } from './pages/AboutPage'
+import { CartPage } from './pages/CartPage'
+import { CreateAccountPage } from './pages/CreateAccountPage'
+import { HomePage } from './pages/HomePage'
+import { LoginPage } from './pages/LoginPage'
+import { ProductPage } from './pages/ProductPage'
+import { ProductsPage } from './pages/ProductsPage'
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AuthProvider>
+        <CartProvider>
+        <ChatMatchesProvider>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route index element={<HomePage />} />
+              <Route path="products" element={<ProductsPage />} />
+              <Route path="products/:productId" element={<ProductPage />} />
+              <Route path="cart" element={<CartPage />} />
+              <Route path="about" element={<AboutPage />} />
+              <Route path="login" element={<LoginPage />} />
+              <Route path="create-account" element={<CreateAccountPage />} />
+            </Route>
+          </Routes>
+        </ChatMatchesProvider>
+        </CartProvider>
+      </AuthProvider>
+    </BrowserRouter>
+  )
+}

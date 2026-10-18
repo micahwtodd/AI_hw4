@@ -1,0 +1,9 @@
+.env
+backend/.venv
+backend/.session_secret
+backend/__pycache__/
+frontend/node_modules
+frontend/dist
+data/
+__pycache__/
+*.pyc

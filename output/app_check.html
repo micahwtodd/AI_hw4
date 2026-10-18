@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Customs — Problem 11 app check</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      color: #111;
+      font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.45;
+    }
+    main {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 32px 20px 64px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      color: #00356b;
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 36px;
+      font-weight: 600;
+    }
+    .intro {
+      margin: 0 0 28px;
+      color: #4d5966;
+    }
+    section {
+      margin: 28px 0 36px;
+      padding-top: 22px;
+      border-top: 1px solid #d5dde6;
+    }
+    h2 {
+      margin: 16px 0 8px;
+      color: #00356b;
+      font-size: 24px;
+    }
+    figure {
+      margin: 12px 0;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #f4f7fa;
+      border: 1px solid #d5dde6;
+    }
+    .check {
+      margin: 0 0 12px;
+    }
+    .file {
+      margin: 0 0 8px;
+      color: #4d5966;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Problem 11: Site testing</h1>
+    <p class="intro">Three checks of the live Campus Customs site. Each section is one check, one screenshot, and what that screenshot proves.</p>
+
+    <section>
+      <h2>1. Chat checks inventory</h2>
+      <p class="check">Check #1 - verifies the chatbot correctly imports the size, quantity, and prices from the database. Screenshot shows user asking for Fencing Left Chest Hoody in Medium, and returns 15 in stock and $68 price, which matches the database fields.</p>
+      <figure>
+        <img src="app_check_images/inventory.png" alt="Chat reports 15 in size medium and a price of $68, beside the inventory quantity and the catalogue price of 68.0">
+        <figcaption class="file">app_check_images/inventory.png</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>2. Search cards after a category question</h2>
+      <p class="check">Check #2 - verifies that a chatbot request for blue shirts pulls up shirts that are in fact blue. Screenshot verifies that both the product boxes and chat window show blue shirts, like the School of Management Crest t-shirt. Please note the first shirt, 2025 Yale Vs harvard T Shirt, does in fact come in Nacy blue although that particular color isn't pictured in the short description box, and is therefore correctly included.</p>
+      <figure>
+        <img src="app_check_images/search-cards.png" alt="Product cards shown after asking for blue t-shirts">
+        <figcaption class="file">app_check_images/search-cards.png</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>3. Recently viewed</h2>
+      <p class="check">Check #3 - I added a "recently viewed" panel so users could flip back and forth with four recent items. The screenshot proves the last four items i clicked show up at the top Recently Viewed items bar in corresponding order (see numbers in red text)</p>
+      <figure>
+        <img src="app_check_images/recently-viewed.png" alt="Recently viewed shows the last four products, numbered from the fleece jacket through the Basic Hoodie">
+        <figcaption class="file">app_check_images/recently-viewed.png</figcaption>
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
